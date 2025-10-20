@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <style>
+      body{
+          font-family: arial sans-serif;
+          background: #eef3f6;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+      }
+
+      .contact-container{
+         background: white;
+         padding: 25px 35px;
+         border-radius: 10px;
+         width: 400px;
+         box-shadow: 0 0 10px rgba ( 0 , 0,0,0.1);
+      }
+      h2{
+          text-align: left;
+          margin-bottom: 20px;
+          color: #333;
+      }
+      form{
+          display: flex;
+          flex-direction: column;
+      }
+      label{
+          margin-top: 10px;
+          font-weight: bold;
+          font-size: 14px;
+      }
+      input[ type="text"],
+      input[type="email"],
+      textarea{
+          padding: 10px;
+          margin-top: 5px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+      }
+
+      .query-type{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5px;
+
+      }
+      .consent{
+        font-size: 13px;
+        margin-top: 10px;
+
+      }
+      button
+{
+    margin-top: 20px;
+    padding: 12px;
+    border: none
+    ;
+    border-radius: 5px;
+    background: teal;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+button:hover{
+  background:#007f7f ;  
+
+}
+    </style>
+  </head>
+  <body>
+    <div class="contact-container">
+      <h1>Contact Us</h1>
+      <form action="#" method="post">
+        <label for="fname">FIRSTNAME</label>
+        <input type="text" id="fname" name="fname" required />
+        <label for="lname">LASTNAME</label>
+        <input type="text" id="lname" name="lname" required />
+        <label for="email">EMAIL ADDRESS</label>
+        <input type="email" id="email" name="email" required />
+        <label> QUERY TYPE</label>
+        <div class="query-type">
+          <label
+            ><input type="radio" name="query" value="general" required />General
+            Enquiry</label
+          >
+          <label
+            ><input type="radio" name="query" value="support" required />Support
+            Request</label
+          >
+        </div>
+        <label for="message">MESSAGE</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+        <label class="consent"
+          ><input type="checkbox" name="consent" />I Consent To Be Contacted By
+          The Team</label
+        >
+        <button type="submit">SUBMIT</button>
+      </form>
+    </div>
+  </body>
+</html>
